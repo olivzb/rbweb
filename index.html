@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <title>ExperienceBlu</title>
+</head>
+<body>
+
+  
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="image/azurilogo.png" alt="Azuri Resort Logo" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="image/pllogo.png" alt="Poste Lafayette Resort Logo" style="width:100%">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)"></a>
+    <a class="next" onclick="plusSlides(1)"></a>
+  </div>
+
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+
+  
+  <nav class="navbar">
+    <ul class="navbar-links">
+      <li><a href="#azuri">Radisson Blu Azuri Resort</a></li>
+      <li><a href="#poste-lafayette">Radisson Blu Poste Lafayette Resort</a></li>
+    </ul>
+  </nav>
+
+  <div class="menu-info">
+    <p>Click on the icon to view our menus</p>
+  </div>
+
+  
+  <div class="section-container">
+    <section id="azuri">
+      <div class="header">
+        <h2>Radisson Blu Azuri Resort & Spa</h2>
+      </div>
+      <div class="container">
+        <div class="button-container">
+            <a href="cafe.html">
+                <button class="image-button">
+                  <img src="image/Cafe-logo.jpg" alt="Cafe Gioia">
+                </button>
+              </a>
+              <a href="cyan.html">
+                <button class="image-button">
+                  <img src="image/Cyanbar-logo.png" alt="Cyan Bar">
+                </button>
+              </a>
+              <a href="bistro.html">
+                <button class="image-button">
+                  <img src="image/Bistropub-logo.png" alt="BistroPub">
+                </button>
+              </a>
+              <a href="blackrock.html">
+                <button class="image-button">
+                  <img src="image/Blackrock-logo.jpg" alt="BlackRock">
+                </button>
+              </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+ 
+
+  <div class="section-container">
+    <section id="poste-lafayette">
+      <div class="header">
+        <h2>Radisson Blu Poste Lafayette Resort & Spa</h2>
+      </div>
+      <div class="container">
+        <div class="button-container">
+            <a href="aqua.html">
+                <button class="image-button">
+                  <img src="image/Aqua-logo.jpg" alt="Aqua">
+                </button>
+              </a>
+              <a href="nautilus.html">
+                <button class="image-button">
+                  <img src="image/nautilus-logo.png" alt="Nautilus">
+                </button>
+              </a>
+              <a href="roof.html">
+                <button class="image-button">
+                  <img src="image/pllogo.png" alt="RoofTop Lounge">
+                </button>
+              </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+ 
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Radisson Blu Resorts. All rights reserved.</p>
+      <div class="social-media">
+        <a href="#" class="social-icon">Facebook</a>
+        <a href="#" class="social-icon">Instagram</a>
+        <a href="#" class="social-icon">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000); 
+    }
+
+    function plusSlides(n) {
+      slideIndex += n;
+      showSlides();
+    }
+
+    function currentSlide(n) {
+      slideIndex = n;
+      showSlides();
+    }
+  </script>
+
+</body>
+</html>
